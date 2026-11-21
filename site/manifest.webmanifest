@@ -1,6 +1,6 @@
 {
-  "name": "서울페이 쓸 수 있는 곳 지도",
-  "short_name": "서울페이 지도",
+  "name": "서울페이 사용처 지도",
+  "short_name": "서울페이 사용처",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

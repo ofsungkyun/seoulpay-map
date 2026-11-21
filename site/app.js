@@ -20,7 +20,7 @@
     loaded: new Map(),        // 파일 -> Promise
     buildings: [],            // {lat,lng,prec,gu,items:[merchant]}
     merchants: [],            // {n,cat,g,a,b}
-    ref: { lat: HOME.lat, lng: HOME.lng, label: "집" },  // 거리 기준점
+    ref: { lat: HOME.lat, lng: HOME.lng, isHome: true },  // 거리 기준점 (처음 위치 또는 내 위치)
     query: "",
     selected: null,
     sheetMode: null,          // "list" | "detail" | "search"
@@ -44,10 +44,10 @@
   const canvas = L.canvas({ padding: 0.3, tolerance: 8 });
   const shopLayer = L.layerGroup().addTo(map);
 
-  // 집 표시 + 거리 원
+  // 기준 위치 표시 + 거리 원
   const homeIcon = L.divIcon({
     className: "",
-    html: `<div class="home-pin"><div class="bubble">🏠 ${esc(HOME.label)}</div><div class="stem"></div></div>`,
+    html: `<div class="home-pin"><div class="bubble">${HOME.icon || "🏠"} ${esc(HOME.label)}</div><div class="stem"></div></div>`,
     iconSize: [130, 56],
     iconAnchor: [65, 56],
   });
@@ -78,7 +78,7 @@
   }
   function distText(b) {
     const m = distM(state.ref, b);
-    const who = state.ref.label === "집" ? "집에서" : "지금 위치에서";
+    const who = state.ref.isHome ? `${HOME.label}에서` : "지금 위치에서";
     if (m > 3000) return `${who} ${fmtDist(m)}`;
     return `${who} ${walkLabel(m)}`;
   }
@@ -350,7 +350,7 @@
     if (more) more.onclick = () => { listLimit += LIST_LIMIT; rerender(true); };
   }
 
-  // 기준점(집/내 위치) 주변 약 2km 안에 걸치는 구는 미리 불러오기
+  // 기준점(처음 위치/내 위치) 주변 약 2km 안에 걸치는 구는 미리 불러오기
   function loadNearRef() {
     if (!state.index) return;
     const d = 0.02;
@@ -363,7 +363,7 @@
   function showList(keepLimit) {
     if (!keepLimit) { listLimit = LIST_LIMIT; loadNearRef(); }
     const arr = nearbyMerchants();
-    const who = state.ref.label === "집" ? "집" : "지금 위치";
+    const who = state.ref.isHome ? HOME.label : "지금 위치";
     const allOn = state.active.size === GROUPS.length;
     const which = allOn ? "모든 가게" : [...state.active].map((i) => GROUPS[i].emoji + " " + GROUPS[i].label).join(", ");
     const sub = `${esc(which)} · ${who}에서 가까운 순서`;
@@ -393,7 +393,7 @@
 
   // ---------- 버튼 ----------
   function goHome() {
-    state.ref = { lat: HOME.lat, lng: HOME.lng, label: "집" };
+    state.ref = { lat: HOME.lat, lng: HOME.lng, isHome: true };
     map.setView([HOME.lat, HOME.lng], CFG.startZoom);
     if (state.sheetMode === "list") showList();
   }
@@ -406,7 +406,7 @@
         $("loading").hidden = true;
         $("loading").textContent = "불러오는 중…";
         const ll = { lat: pos.coords.latitude, lng: pos.coords.longitude };
-        state.ref = { ...ll, label: "내 위치" };
+        state.ref = { ...ll, isHome: false };
         if (meMarker) meMarker.remove();
         meMarker = L.marker([ll.lat, ll.lng], { icon: L.divIcon({ className: "", html: '<div class="me-dot"></div>', iconSize: [26, 26], iconAnchor: [13, 13] }), interactive: false }).addTo(map);
         map.setView([ll.lat, ll.lng], 17);
