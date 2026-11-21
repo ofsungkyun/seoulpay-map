@@ -24,17 +24,17 @@
 
 ## 업종별 색깔과 아이콘
 
-| 색깔 | 아이콘 | 묶음 이름 | 색상 코드 | 포함된 서울페이 업종 |
-|:---:|:---:|---|---|---|
-| <img src="assets/readme/color-food.svg" width="24" height="24" alt="#c92a2a"> | 🍚 | **음식점·카페** | `#c92a2a` | 음식점/식음료업 |
-| <img src="assets/readme/color-grocery.svg" width="24" height="24" alt="#2f7d32"> | 🛒 | **마트·식료품** | `#2f7d32` | 식자재/유통 |
-| <img src="assets/readme/color-health.svg" width="24" height="24" alt="#1971c2"> | 💊 | **병원·약국** | `#1971c2` | 보건/복지 |
-| <img src="assets/readme/color-living.svg" width="24" height="24" alt="#9c36b5"> | ✂️ | **미용·생활** | `#9c36b5` | 생활/리빙 |
-| <img src="assets/readme/color-clothes.svg" width="24" height="24" alt="#d6336c"> | 👕 | **옷·잡화** | `#d6336c` | 의류/잡화 |
-| <img src="assets/readme/color-culture.svg" width="24" height="24" alt="#0b7285"> | 🏃 | **운동·문화·여행** | `#0b7285` | 문화/체육, 여행/숙박 |
-| <img src="assets/readme/color-home.svg" width="24" height="24" alt="#f08c00"> | 🔧 | **가전·가구·수리** | `#f08c00` | 가전/통신, 건축/철물, 가구/인테리어, 디자인/인쇄 |
-| <img src="assets/readme/color-edu.svg" width="24" height="24" alt="#8d5524"> | 📚 | **학원·교육** | `#8d5524` | 기술/기능 교육, 입시/교습학원, 예술 교육, 외국어/언어, 기타교육기관 |
-| <img src="assets/readme/color-car.svg" width="24" height="24" alt="#343a40"> | 🚗 | **자동차·주유** | `#343a40` | 자동차/주유 |
-| <img src="assets/readme/color-etc.svg" width="24" height="24" alt="#868e96"> | 📦 | **기타** | `#868e96` | 기타, 부동산/임대, 기업/기관 |
+| 지도 표시 | 묶음 이름 | 포함된 서울페이 업종 |
+|:---:|---|---|
+| <img src="assets/readme/color-food.svg" width="24" height="24" alt="#c92a2a">&nbsp;🍚 | **음식점·카페** | 음식점/식음료업 |
+| <img src="assets/readme/color-grocery.svg" width="24" height="24" alt="#2f7d32">&nbsp;🛒 | **마트·식료품** | 식자재/유통 |
+| <img src="assets/readme/color-health.svg" width="24" height="24" alt="#1971c2">&nbsp;💊 | **병원·약국** | 보건/복지 |
+| <img src="assets/readme/color-living.svg" width="24" height="24" alt="#9c36b5">&nbsp;✂️ | **미용·생활** | 생활/리빙 |
+| <img src="assets/readme/color-clothes.svg" width="24" height="24" alt="#d6336c">&nbsp;👕 | **옷·잡화** | 의류/잡화 |
+| <img src="assets/readme/color-culture.svg" width="24" height="24" alt="#0b7285">&nbsp;🏃 | **운동·문화·여행** | 문화/체육, 여행/숙박 |
+| <img src="assets/readme/color-home.svg" width="24" height="24" alt="#f08c00">&nbsp;🔧 | **가전·가구·수리** | 가전/통신, 건축/철물, 가구/인테리어, 디자인/인쇄 |
+| <img src="assets/readme/color-edu.svg" width="24" height="24" alt="#8d5524">&nbsp;📚 | **학원·교육** | 기술/기능 교육, 입시/교습학원, 예술 교육, 외국어/언어, 기타교육기관 |
+| <img src="assets/readme/color-car.svg" width="24" height="24" alt="#343a40">&nbsp;🚗 | **자동차·주유** | 자동차/주유 |
+| <img src="assets/readme/color-etc.svg" width="24" height="24" alt="#868e96">&nbsp;📦 | **기타** | 기타, 부동산/임대, 기업/기관 |
 
 지도: [OpenStreetMap](https://www.openstreetmap.org/copyright) · 가맹점 자료: 서울사랑상품권 가맹점 현황(2026.8.10 기준)
