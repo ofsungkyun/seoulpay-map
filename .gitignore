@@ -1,0 +1,14 @@
+# 원본/중간 데이터 (용량 큼, 스크립트로 다시 만들 수 있음)
+*.xlsx
+/data/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+
+# 도구(bkit) 상태 파일
+docs/.bkit-memory.json
+docs/.pdca-status.json
+
+# 개인 메모 (집 정확한 위치, 배포/관리 메모) — GitHub에 올리지 않음
+/private/
