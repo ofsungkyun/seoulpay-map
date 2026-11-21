@@ -24,7 +24,7 @@
 
 ## 업종별 색깔과 아이콘
 
-| 지도 표시 | 묶음 이름 | 포함된 서울페이 업종 |
+| 표시 | 묶음 이름 | 포함된 서울페이 업종 |
 |:---:|---|---|
 | <img src="assets/readme/color-food.svg" width="24" height="24" alt="#c92a2a">&nbsp;🍚 | **음식점·카페** | 음식점/식음료업 |
 | <img src="assets/readme/color-grocery.svg" width="24" height="24" alt="#2f7d32">&nbsp;🛒 | **마트·식료품** | 식자재/유통 |
